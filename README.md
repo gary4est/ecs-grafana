@@ -16,7 +16,9 @@ The versions available are listed on the [Grafana Docker Hub](https://hub.docker
 
 
 ## Required Environment Variables
-In order to build and run Grafana in AWS on ECS, you need to setup an RDS Mysql instance, with the `grafana` database. This build utilizes the [aws-env tool](https://github.com/Droplr/aws-env) from [Droplr](https://github.com/Droplr) to grab values from the AWS Parameter store as environment variables that the ECS service will use.
+In order to build and run Grafana ECS in AWS, you need to setup an RDS Mysql instance, with the `grafana` database. The [grafana mysql guide](https://grafana.com/docs/features/datasources/mysql/) has information on this setup.
+
+This build utilizes the [aws-env tool](https://github.com/Droplr/aws-env) from [Droplr](https://github.com/Droplr) to grab values from the AWS Parameter store as environment variables that the ECS service will use. See the `ENTRYPOINT` in the [Dockerfile](Dockerfile)
 
 ```
 GF_AUTH_DISABLE_LOGIN_FORM
