@@ -7,7 +7,7 @@ To build a new Docker image of Grafana for ECS you need to update the Dockerfile
 - Checkout the last version of the repo and create a new branch
 - Update the **Dockerfile** to specify the version to build
 
-`FROM grafana/grafana:5.4.3`
+`FROM grafana/grafana:6.0.2`
 
 The versions available are listed on the [Grafana Docker Hub](https://hub.docker.com/r/grafana/grafana/tags).
 
